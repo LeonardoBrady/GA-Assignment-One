@@ -1,6 +1,10 @@
 html {
   font-family: "Julius Sans One", sans-serif;
 }
+* {
+  margin: 0%;
+  padding: 0%;
+}
  /* CSS for the header */
  header {
   background-color: #333; /* Background color for the header */
@@ -9,7 +13,7 @@ html {
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
   align-items: center; /* Center items vertically */
-  width: 100%;
+  width: auto;
   height: 70px;
 }
 
@@ -37,6 +41,45 @@ html {
   text-decoration: none; /* Remove underline from links */
   color: #fff; /* Set link text color to white */
 }
+/* CSS for the header End */
+
+ /* Style for the footer */
+ footer {
+  display: flex; /* Make the header a flex container */
+  justify-content: space-between; /* Space items evenly horizontally */
+  align-items: center; /* Center items vertically */
+  width: auto;
+  height: 70px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for social media icons */
+.social-icons {
+  margin: 10px;
+}
+.social-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition:  width 500ms linear 750ms;
+}
+.social-img:hover {
+  width: 50px;
+  height: auto;
+ }
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+}
+a:hover {
+  font-size: larger;
+}
+/* Style for the footer End */
 
 /* cart section css starts */
 /* Overall styling */
