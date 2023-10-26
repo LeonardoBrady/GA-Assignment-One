@@ -1,6 +1,85 @@
 html {
   font-family: "Julius Sans One", sans-serif;
 }
+* {
+  margin: 0%;
+  padding: 0%;
+}
+ /* CSS for the header */
+ header {
+  background-color: #333; /* Background color for the header */
+  color: #fff; /* Text color for the header */
+  padding: 10px; /* Add some padding for better spacing */
+  display: flex; /* Make the header a flex container */
+  justify-content: space-between; /* Space items evenly horizontally */
+  align-items: center; /* Center items vertically */
+  width: auto;
+  height: 70px;
+}
+
+/* Style for the logo */
+.logo {
+ /* font-size: 24px; /* Adjust the font size as needed */
+  /*font-weight: bold; /* Make the text bold */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+ }
+
+/* Style for the navigation links */
+.nav-links {
+  list-style: none; /* Remove the default list style */
+  padding: 0; /* Remove padding for the list */
+  display: flex; /* Make the list a flex container */
+}
+
+.nav-links li {
+  margin-right: 20px; /* Add some spacing between the links */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Set link text color to white */
+}
+/* CSS for the header End */
+
+ /* Style for the footer */
+ footer {
+  display: flex; /* Make the header a flex container */
+  justify-content: space-between; /* Space items evenly horizontally */
+  align-items: center; /* Center items vertically */
+  width: auto;
+  height: 70px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for social media icons */
+.social-icons {
+  margin: 10px;
+}
+.social-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition:  width 500ms linear 750ms;
+}
+.social-img:hover {
+  width: 50px;
+  height: auto;
+ }
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+}
+a:hover {
+  font-size: larger;
+}
+/* Style for the footer End */
 
 /* Overall styling */
 body {
