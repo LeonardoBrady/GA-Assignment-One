@@ -5,8 +5,8 @@ html {
   margin: 0%;
   padding: 0%;
 }
- /* CSS for the header */
- header {
+/* CSS for the header */
+header {
   background-color: #333; /* Background color for the header */
   color: #fff; /* Text color for the header */
   padding: 10px; /* Add some padding for better spacing */
@@ -19,12 +19,12 @@ html {
 
 /* Style for the logo */
 .logo {
- /* font-size: 24px; /* Adjust the font size as needed */
+  /* font-size: 24px; /* Adjust the font size as needed */
   /*font-weight: bold; /* Make the text bold */
   width: 50px;
   height: 50px;
   border-radius: 50%;
- }
+}
 
 /* Style for the navigation links */
 .nav-links {
@@ -43,8 +43,8 @@ html {
 }
 /* CSS for the header End */
 
- /* Style for the footer */
- footer {
+/* Style for the footer */
+footer {
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
   align-items: center; /* Center items vertically */
@@ -64,12 +64,12 @@ html {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  transition:  width 500ms linear 750ms;
+  transition: width 500ms linear 750ms;
 }
 .social-img:hover {
   width: 50px;
   height: auto;
- }
+}
 .social-icons a {
   color: #fff;
   text-decoration: none;
@@ -268,7 +268,7 @@ button:hover {
 }
 
 /* Styling for smaller screens (e.g., tablets and mobile) */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   #cart {
     flex-direction: column;
     align-items: center;
@@ -288,4 +288,7 @@ button:hover {
     max-width: 100%;
   }
 }
+
+/* style for bigger screen */
+
 /* cart section css ends here */
