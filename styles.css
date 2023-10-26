@@ -1,3 +1,7 @@
+html {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
 /* Default styling for cart items */
 #cart {
   display: flex;
