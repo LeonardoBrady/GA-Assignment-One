@@ -2,7 +2,6 @@ html {
   font-family: "Julius Sans One", sans-serif;
 }
 
-/* cart section css starts */
 /* Overall styling */
 body {
   font-family: "Julius Sans One", sans-serif;
@@ -10,13 +9,13 @@ body {
   margin: 0;
   padding: 0;
   /* display: flex;
-  justify-content: center;
-  align-items: center;
-   */
+    justify-content: center;
+    align-items: center;
+     */
   min-height: 100vh;
 }
 
-/* Cart section styling */
+/* cart section css starts */
 #cart {
   display: flex;
   flex-direction: column;
@@ -60,6 +59,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cart-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 .cart-item:hover {
@@ -125,6 +131,14 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.clear-cart-btn {
+  background-color: #ff0000 !important;
+}
+
+.clear-cart-btn:hover {
+  background-color: #840303 !important;
 }
 
 /* Default styling for store items */
