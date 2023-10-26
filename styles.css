@@ -41,14 +41,17 @@ html {
   font-size: 1rem;
 }
 
-/* Default styling for cart items */
+/* Default styling for store items */
 #store { 
-  margin: 20px;
+  width: auto;
+  height: auto;
+  margin: 30px 50px;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  border: 2px red solid;
+  border: 2px rgb(0, 0, 0) solid;
   justify-content: space-around;
+  background-color: #ccc;
 }
 
 .store-items {
@@ -79,6 +82,10 @@ html {
 
 .store-items p {
   color: white;
+}
+.store-items button {
+  color: black;
+  background-color: #ccc;
 }
 
 
