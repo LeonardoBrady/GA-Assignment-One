@@ -219,6 +219,36 @@ button:hover {
 .clear-cart-btn:hover {
   background-color: #840303 !important;
 }
+/* cart item QTY */
+/* Add these styles for the quantity control buttons */
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  width: 30px; /* Adjust this width to your preference */
+  text-align: center;
+}
+.quantity-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.quantity-btn:hover {
+  background-color: #0056b3;
+}
 
 /* Default styling for store items */
 #store {
@@ -314,13 +344,11 @@ button:hover {
   transition: all 0.4s ease;
 
   &:hover {
-     border: 1px solid rgb(0, 0, 0);
-     box-shadow: inset 0px -80px 0px tan;
-     transform: translateY(-5px);
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: inset 0px -80px 0px tan;
+    transform: translateY(-5px);
   }
-  
 }
-
 
 /* Styling for smaller screens (e.g., tablets and mobile) */
 @media only screen and (max-width: 768px) {
@@ -345,21 +373,17 @@ button:hover {
   #store h2 {
     font-size: 3rem;
   }
-
 }
 
 /* style for bigger screen */
 
 @media only screen and (max-width: 1366px) {
-
-#store {
-  padding: 50px;
-  height: auto;
-  margin: auto;
-  flex-direction: row;
+  #store {
+    padding: 50px;
+    height: auto;
+    margin: auto;
+    flex-direction: row;
+  }
 }
-
-}
-
 
 /* cart section css ends here */
