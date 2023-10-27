@@ -7,23 +7,26 @@ html {
 }
 /* CSS for the header */
 header {
-  background-color: #333; /* Background color for the header */
-  color: #fff; /* Text color for the header */
+  /*background-color: #6B9AC4; /* Background color for the header */
+  color: #4059ad; /* Text color for the header */
   padding: 10px; /* Add some padding for better spacing */
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
-  align-items: center; /* Center items vertically */
+  align-items:start; /* align items top of basline */
+  background-image: url(images/background04-1.jpeg);
+  background-position: 10%;
+  background-repeat: no-repeat;
   width: auto;
-  height: 70px;
+  height: 300px;
 }
-
 /* Style for the logo */
 .logo {
   /* font-size: 24px; /* Adjust the font size as needed */
   /*font-weight: bold; /* Make the text bold */
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  
 }
 
 /* Style for the navigation links */
@@ -39,7 +42,8 @@ header {
 
 .nav-links a {
   text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Set link text color to white */
+  color: hwb(316 0% 94%); /* Set link text color to pink */
+  font-weight: bolder;
 }
 /* CSS for the header End */
 
@@ -49,9 +53,10 @@ footer {
   justify-content: space-between; /* Space items evenly horizontally */
   align-items: center; /* Center items vertically */
   width: auto;
-  height: 70px;
-  background-color: #333;
-  color: #fff;
+  height: 150px;
+  background-color:  #007bff;
+  color: black;
+  font-weight: bolder;
   text-align: center;
   padding: 20px;
 }
@@ -100,10 +105,11 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  border-radius: 8px;
-  border: 1px solid red; /* remove it when finish this part*/
+ /* border-radius: 8px;
+  /*border: 1px solid red; /* remove it when finish this part*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  /*background-color: #fff;*/
+  background-color: #f4b942;
 }
 
 .cart-items {
@@ -258,11 +264,12 @@ button:hover {
   flex: wrap;
   align-items: flex-start;
   flex-wrap: wrap;
-  border: 2px rgb(0, 0, 0) solid;
-  border-radius: 8px;
+  /*border: 2px rgb(0, 0, 0) solid;*/
+  /*border-radius: 8px;*/
   justify-content: space-evenly;
-  background-color: #ffffff;
-  background-image: url(./images/background01.png);
+  background-color: #f4b942;
+ /* background-color: #ffffff;
+  background-image: url(./images/background04-1.jpeg);*/
 }
 
 .store-items {
@@ -351,29 +358,32 @@ button:hover {
   }
 }
 
-/* Styling for smaller screens (e.g., tablets and mobile) */
+/* Styling cart section for smaller screens*/
 @media only screen and (max-width: 768px) {
   #cart {
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
   }
 
   .cart-item {
-    max-width: 100%;
-  }
-
-  /* styling for store 768px */
-
-  #store {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    text-align: center;
+    max-width: 300px;
   }
 
-  #store h2 {
-    font-size: 3rem;
+  .cart-item img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 8px;
   }
+
+  .quantity-control {
+    margin-top: 10px;
+  }
+
+  .cart-total {
+    padding: 10px 0;
+  }
+
 }
 
 /* style for bigger screen */
