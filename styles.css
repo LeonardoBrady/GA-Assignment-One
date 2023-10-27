@@ -348,12 +348,12 @@ button:hover {
   font-weight: 600;
   margin-top: 32px;
   cursor: pointer;
-  box-shadow: inset 0px 0px 0px rgb(173, 173, 173);
+  box-shadow: inset 0px 0px 0px #f4b942;
   transition: all 0.4s ease;
 
   &:hover {
     border: 1px solid rgb(0, 0, 0);
-    box-shadow: inset 0px -80px 0px rgb(255, 255, 255);
+    box-shadow: inset 0px -80px 0px bisque;
     transform: translateY(-5px);
   }
 }
@@ -384,7 +384,7 @@ button:hover {
     padding: 10px 0;
   }
 
-   /* styling for store 768px */
+   /* START of styling for store 768px */
 
    #store {
     width: auto;
@@ -395,19 +395,45 @@ button:hover {
 
   #store h2 {
     font-size: 3rem;
+    letter-spacing: 2px;
   }
+   /* END of styling for store 768px */
+
+
+}
+/* Styling for Mobile-L (425px) */
+@media only screen and (max-width: 425px) {
+     /* START of styling for store 425px */
+    #store h2 {
+      font-size: 2.5rem;
+    }
+     /* END of styling for store 425px */
+
+
+}
+/* Styling for Mobile-S (320px) */
+@media only screen and (max-width: 320px) {
+  /* START of styling for store 320px */
+  #store h2 {
+    font-size: 2rem;
+  }
+  /* END of styling for store 320px */
+
 
 }
 
 /* style for bigger screen */
 
 @media only screen and (max-width: 1366px) {
+   /* START of styling for store 1366px */
   #store {
     padding: 50px;
     height: auto;
     margin: auto;
     flex-direction: row;
   }
+ /* END of styling for store 1366px */
+
 }
 
 /* cart section css ends here */
