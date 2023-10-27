@@ -224,17 +224,15 @@ button:hover {
 #store {
   width: auto;
   height: auto;
-  margin: 30px 50px;
+  margin: 5px
   display: flex;
   flex: wrap;
   align-items: flex-start;
   flex-wrap: wrap;
   border: 2px rgb(0, 0, 0) solid;
+  border-radius: 2%;
   justify-content: space-around;
-  background-color: #ccc;
-  background-image: url(https://img.freepik.com/free-photo/marble-product-backdrop-with-blank-space_53876-124610.jpg?w=1380&t=st=1698300286~exp=1698300886~hmac=5fea118e886f7bbecbc2118830bf534575ee51f06f753a84d95b0d5b5cf08650);
-  background-position: center;
-  background-size: cover;
+  background-color: #ffffff;
 }
 
 .store-items {
@@ -258,14 +256,10 @@ button:hover {
 }
 
 .store-items p {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 1.25rem;
 }
-.store-items button {
-  color: black;
-  background-color: #ccc;
-  border: 2px black solid;
-}
+
 
 /* Styling for smaller screens (e.g., tablets and mobile) */
 @media only screen and (max-width: 768px) {
