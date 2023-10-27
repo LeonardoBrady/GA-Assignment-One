@@ -350,28 +350,30 @@ button:hover {
   }
 }
 
-/* Styling for smaller screens (e.g., tablets and mobile) */
+/* Styling cart section for smaller screens*/
 @media only screen and (max-width: 768px) {
   #cart {
-    flex-direction: column;
-    align-items: center;
+    padding: 10px;
   }
 
   .cart-item {
-    max-width: 100%;
-  }
-
-  /* styling for store 768px */
-
-  #store {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    text-align: center;
+    max-width: 300px;
   }
 
-  #store h2 {
-    font-size: 3rem;
+  .cart-item img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .quantity-control {
+    margin-top: 10px;
+  }
+
+  .cart-total {
+    padding: 10px 0;
   }
 }
 
