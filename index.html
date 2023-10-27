@@ -27,56 +27,95 @@
 
     <!-- STORE starts by Liam -->
     <section id="store">
+      <h2>Welcome to the JuicyJunction catalogue</h2>
       <div class="store-items">
         <!-- Store Item 1 -->
         <div class="product-1">
           <img src="./images/blueberry.jpeg" alt="Blueberrys" />
           <p class="price">$2.50</p>
-          <br>
-          <p class="product-name">Blueberry 170g EA</p>
+          <br />
+          <p class="product-name">Blueberry 170g</p>
           <p><button>Add to Cart</button></p>
+          <!-- I had to use type='tel' because type='number' does not let me set max length, but 'tel' allows other charaters sadly-->
+          <input
+            class="product-quantity"
+            type="tel"
+            name="quantity"
+            maxlength="1"
+          />
         </div>
         <!-- Store Item 2 -->
         <div class="product-2">
           <img src="./images/cherry.jpeg" alt="Cherrys" />
           <p class="price-extra">$105/BOX</p>
-          <br>
-          <p class="product-name">Premium VIC Cherry</p>
+          <br />
+          <p class="product-name">Premium Cherry</p>
           <p><button>Add to Cart</button></p>
+          <input
+            class="product-quantity"
+            type="tel"
+            name="quantity"
+            maxlength="1"
+          />
         </div>
         <!-- Store Item 3 -->
         <div class="product-3">
           <img src="./images/orange.jpeg" alt="Orange" />
           <p class="price">$4.50</p>
-          <br>
-          <p class="product-name">Orange Navel Loose 1kg</p>
+          <br />
+          <p class="product-name">Orange Loose</p>
           <p><button>Add to Cart</button></p>
+          <input
+            class="product-quantity"
+            type="tel"
+            name="quantity"
+            maxlength="1"
+          />
         </div>
         <!-- Store Item 4 -->
         <div class="product-4">
           <img src="./images/pineapple.png" alt="Pineapple" />
           <p class="price-extra">$5.50/EA</p>
-          <br>
-          <p class="product-name">Sweetest Pineapple</p>
+          <br />
+          <p class="product-name">Sweet Pineapple</p>
           <p><button>Add to Cart</button></p>
+          <input
+            class="product-quantity"
+            type="tel"
+            name="quantity"
+            maxlength="1"
+          />
         </div>
         <!-- Store Item 5 -->
         <div class="product-5">
           <img src="./images/Project-grapes.jpg" alt="grapes" />
-          <p class="price">$5.00</p>
-          <br>
+          <p class="price">$3.25</p>
+          <br />
           <p class="product-name">Grapes</p>
           <p><button>Add to Cart</button></p>
+          <input
+            class="product-quantity"
+            type="tel"
+            name="quantity"
+            maxlength="1"
+          />
         </div>
         <!-- Store Item 6 -->
         <div class="product-6">
           <img src="./images/Project-kiwi.jpg" alt="kiwi fruit" />
-          <p class="price">$5.00</p>
-          <br>
+          <p class="price">$1.75</p>
+          <br />
           <p class="product-name">Kiwi Fruit</p>
           <p><button>Add to Cart</button></p>
+          <input
+            class="product-quantity"
+            type="tel"
+            name="quantity"
+            maxlength="1"
+          />
         </div>
       </div>
+      <h2>Max Quantity per item: 9</h2>
     </section>
     <!-- STORE ends -->
 
@@ -95,6 +134,12 @@
           <img src="./images/cherry.jpeg" alt="cherry" />
           <h2>Premium Cherry</h2>
           <p>Total: $105</p>
+          <!-- cart QTY part -->
+          <div class="quantity-control">
+            <button class="quantity-btn minus">-</button>
+            <input type="number" class="quantity" value="1" min="1" />
+            <button class="quantity-btn plus">+</button>
+          </div>
           <button>Remove</button>
         </div>
         <!-- Cart Item 2 -->
@@ -102,6 +147,12 @@
           <img src="./images/pineapple.png" alt="pineapple" />
           <h2>Sweet Pineapple</h2>
           <p>Total: $5.50</p>
+          <!-- cart QTY part -->
+          <div class="quantity-control">
+            <button class="quantity-btn minus">-</button>
+            <input type="number" class="quantity" value="1" min="1" />
+            <button class="quantity-btn plus">+</button>
+          </div>
           <button>Remove</button>
         </div>
         <!-- Cart Item 3 -->
@@ -109,6 +160,12 @@
           <img src="./images/orange.jpeg" alt="orange" />
           <h2>Orange Loose</h2>
           <p>Total: $4.50</p>
+          <!-- cart QTY part -->
+          <div class="quantity-control">
+            <button class="quantity-btn minus">-</button>
+            <input type="number" class="quantity" value="1" min="1" />
+            <button class="quantity-btn plus">+</button>
+          </div>
           <button>Remove</button>
         </div>
         <!-- Cart Item 4 -->
@@ -116,6 +173,12 @@
           <img src="./images/blueberry.jpeg" alt="blueberry" />
           <h2>Blueberry 170g</h2>
           <p>Total: $2.50</p>
+          <!-- cart QTY part -->
+          <div class="quantity-control">
+            <button class="quantity-btn minus">-</button>
+            <input type="number" class="quantity" value="1" min="1" />
+            <button class="quantity-btn plus">+</button>
+          </div>
           <button>Remove</button>
         </div>
       </div>
