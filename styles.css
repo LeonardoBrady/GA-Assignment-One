@@ -348,12 +348,12 @@ button:hover {
   font-weight: 600;
   margin-top: 32px;
   cursor: pointer;
-  box-shadow: inset 0px 0px 0px rgb(0, 0, 0);
+  box-shadow: inset 0px 0px 0px rgb(173, 173, 173);
   transition: all 0.4s ease;
 
   &:hover {
     border: 1px solid rgb(0, 0, 0);
-    box-shadow: inset 0px -80px 0px tan;
+    box-shadow: inset 0px -80px 0px rgb(255, 255, 255);
     transform: translateY(-5px);
   }
 }
@@ -382,6 +382,19 @@ button:hover {
 
   .cart-total {
     padding: 10px 0;
+  }
+
+   /* styling for store 768px */
+
+   #store {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #store h2 {
+    font-size: 3rem;
   }
 
 }
