@@ -269,6 +269,7 @@ button:hover {
   outline: 1px black solid;
   border-radius: 4px;
 }
+
 .price {
   margin-left: 40%;
   margin-right: 40%;
@@ -282,6 +283,10 @@ button:hover {
   background-color: white;
   outline: 1px black solid;
   border-radius: 4px;
+}
+
+.product-quantity {
+  width: 30px;
 }
 
 
