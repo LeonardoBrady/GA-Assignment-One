@@ -267,18 +267,21 @@ button:hover {
   width: fit-content;
   background-color: white;
   outline: 1px black solid;
+  border-radius: 4px;
 }
 .price {
   margin-left: 40%;
   margin-right: 40%;
   background-color: white;
   outline: 1px black solid;
+  border-radius: 4px;
 }
 .price-extra {
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 35%;
+  margin-right: 32%;
   background-color: white;
   outline: 1px black solid;
+  border-radius: 4px;
 }
 
 
