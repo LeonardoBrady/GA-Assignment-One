@@ -289,6 +289,16 @@ button:hover {
   width: 30px;
 }
 
+#store h2 {
+  font-size: 4rem;
+  font-weight: bolder;
+  text-align: center;
+  background-color: white;
+  outline: 3px black solid;
+  width: fit-content;
+  margin: 20px;
+}
+
 
 /* Styling for smaller screens (e.g., tablets and mobile) */
 @media only screen and (max-width: 768px) {
@@ -308,6 +318,10 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+  }
+
+  #store h2 {
+    font-size: 3rem;
   }
 
 }
