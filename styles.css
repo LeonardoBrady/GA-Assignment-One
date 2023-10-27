@@ -299,6 +299,28 @@ button:hover {
   margin: 20px;
 }
 
+.store-items button {
+  padding: 16px 32px;
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: 32px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 0px rgb(0, 0, 0);
+  transition: all 0.4s ease;
+
+  &:hover {
+     border: 1px solid rgb(0, 0, 0);
+     box-shadow: inset 0px -80px 0px tan;
+     transform: translateY(-5px);
+  }
+  
+}
+
 
 /* Styling for smaller screens (e.g., tablets and mobile) */
 @media only screen and (max-width: 768px) {
