@@ -7,23 +7,26 @@ html {
 }
 /* CSS for the header */
 header {
-  background-color: #333; /* Background color for the header */
-  color: #fff; /* Text color for the header */
+  /*background-color: #6B9AC4; /* Background color for the header */
+  color: #4059ad; /* Text color for the header */
   padding: 10px; /* Add some padding for better spacing */
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
-  align-items: center; /* Center items vertically */
+  align-items: baseline ; /* align items top of basline */
+  background-image: url(images/background05.jpeg);
+  background-position: 1%;
   width: auto;
-  height: 70px;
+  height: 300px;
 }
 
 /* Style for the logo */
 .logo {
   /* font-size: 24px; /* Adjust the font size as needed */
   /*font-weight: bold; /* Make the text bold */
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  
 }
 
 /* Style for the navigation links */
@@ -39,7 +42,8 @@ header {
 
 .nav-links a {
   text-decoration: none; /* Remove underline from links */
-  color: #fff; /* Set link text color to white */
+  color: hwb(316 0% 94%); /* Set link text color to pink */
+  font-weight: bolder;
 }
 /* CSS for the header End */
 
@@ -49,9 +53,10 @@ footer {
   justify-content: space-between; /* Space items evenly horizontally */
   align-items: center; /* Center items vertically */
   width: auto;
-  height: 70px;
-  background-color: #333;
-  color: #fff;
+  height: 150px;
+  background-color: #b4becb48;
+  color: black;
+  font-weight: bolder;
   text-align: center;
   padding: 20px;
 }
