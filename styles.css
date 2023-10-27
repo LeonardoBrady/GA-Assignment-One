@@ -317,6 +317,7 @@ button:hover {
 
 .product-quantity {
   width: 30px;
+  text-align: center;
 }
 
 #store h2 {
