@@ -13,7 +13,7 @@ header {
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
   align-items:start; /* align items top of basline */
-  background-image: url(images/background04-1.jpeg);
+  background-image: url(images/background04-1.jpeg); /*background image */
   background-position: 10%;
   background-repeat: no-repeat;
   width: auto;
@@ -42,10 +42,30 @@ header {
 
 .nav-links a {
   text-decoration: none; /* Remove underline from links */
-  color: hwb(316 0% 94%); /* Set link text color to pink */
+  color: hwb(316 0% 94%); /* Set link text color to look black */
   font-weight: bolder;
 }
+/*Media Query for header section*/
+@media only screen and (max-width: 460px) {
+  #header{
+    flex-direction: column;
+   
+    align-items: center;
+  }
+ .nav-links {
+    flex-direction: column;
+    padding-left: 10px;
+    }
+    .nav {
+      font-size: small;
+    }
+ }
+ /*Media Query for header section end*/
+/*-----------------------------------
+ ------------------------------------
+ ------------------------------------*/
 /* CSS for the header End */
+
 
 /* Style for the footer */
 footer {
@@ -53,7 +73,7 @@ footer {
   justify-content: space-between; /* Space items evenly horizontally */
   align-items: center; /* Center items vertically */
   width: auto;
-  height: 150px;
+  height: 200px;
   background-color:  #007bff;
   color: black;
   font-weight: bolder;
@@ -84,6 +104,19 @@ footer {
 a:hover {
   font-size: larger;
 }
+
+/*Media query sections for footer*/
+@media only screen and (max-width: 325px) {
+  #footer {
+    flex-direction: column;
+  }
+  .footer-1 {
+    font-size: x-small;
+  }
+}
+/*Media query sections for footer*/
+
+
 /* Style for the footer End */
 
 /* Overall styling */
@@ -408,8 +441,7 @@ button:hover {
       font-size: 2.5rem;
     }
      /* END of styling for store 425px */
-
-
+   
 }
 /* Styling for Mobile-S (320px) */
 @media only screen and (max-width: 320px) {
@@ -418,9 +450,7 @@ button:hover {
     font-size: 2rem;
   }
   /* END of styling for store 320px */
-
-
-}
+ }
 
 /* style for bigger screen */
 
