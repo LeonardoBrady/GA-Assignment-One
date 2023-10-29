@@ -10,7 +10,7 @@ Easy Checkout: A straightforward checkout process.
 Responsive Design: The website is designed to work seamlessly on both desktop and mobile devices.
 
 Usage
-Visit the website at www.JuicyJunction.com.
+Visit the website at https://shihuaxie.github.io/GA-Assignment-One/.
 Browse through the assortment of fruits.
 Select the fruits you want and add them to your cart.
 Proceed to checkout and follow the simple steps to place your order.
