@@ -19,7 +19,7 @@ Enjoy your fruity shopping experience!
 License
 This project is open-source and available under the SPL License. Feel free to use and modify it as needed.
 
-For any questions or feedback, please contact us at example@fruit.com.au.
+For any questions or feedback, please contact us at JuicyJunction@fruit.com.au.
 
 Group Project by: Praseen, Sylvia & Liam.
 
