@@ -13,11 +13,11 @@ header {
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
   align-items:start; /* align items top of basline */
-  background-image: url(images/background04-1.jpeg); /*background image */
-  background-position: 10%;
+  background-image: url(./images/background-image.jpg); /*background image */
+ background-size: cover;
   background-repeat: no-repeat;
   width: auto;
-  height: 300px;
+  height: 150px;
 }
 /* Style for the logo */
 .logo {
