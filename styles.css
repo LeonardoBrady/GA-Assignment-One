@@ -267,7 +267,7 @@ button:hover {
   /*border: 2px rgb(0, 0, 0) solid;*/
   /*border-radius: 8px;*/
   justify-content: space-evenly;
-  background-color: #f4b942;
+  background-color: #59c3c3;
  /* background-color: #ffffff;
   background-image: url(./images/background04-1.jpeg);*/
 }
@@ -331,7 +331,7 @@ button:hover {
   font-size: 4rem;
   font-weight: bolder;
   text-align: center;
-  background-color: bisque;
+  background-color: #ebebeb;
   outline: 3px black solid;
   width: fit-content;
   margin: 20px;
@@ -348,12 +348,12 @@ button:hover {
   font-weight: 600;
   margin-top: 32px;
   cursor: pointer;
-  box-shadow: inset 0px 0px 0px #f4b942;
-  transition: all 0.4s ease;
+  box-shadow: inset 0px 0px 0px #59c3c3;
+  transition: all 0.8s ease;
 
   &:hover {
     border: 1px solid rgb(0, 0, 0);
-    box-shadow: inset 0px -80px 0px bisque;
+    box-shadow: inset 0px -80px 0px #f45b69;
     transform: translateY(-5px);
   }
 }
