@@ -8,12 +8,12 @@ html {
 /* CSS for the header */
 header {
   /*background-color: #6B9AC4; /* Background color for the header */
-  color: #4059ad; /* Text color for the header */
+ /* color: #4059ad; /* Text color for the header */
   padding: 10px; /* Add some padding for better spacing */
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
-  align-items:start; /* align items top of basline */
-  background-image: url(images/background04-1.jpeg); /*background image */
+  align-items: center; /* align items top of centre */
+  background-image: url(./images/small-leaves-flowers-near-slices-fruits.jpg); /*background image */
   background-position: 10%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,7 +35,12 @@ header {
   padding: 0; /* Remove padding for the list */
   display: flex; /* Make the list a flex container */
 }
-
+.nav {
+  background-color: #59c3c3;
+}
+.nav:hover {
+  background-color: #f45b69;
+}
 .nav-links li {
   margin-right: 20px; /* Add some spacing between the links */
 }
@@ -49,15 +54,28 @@ header {
 @media only screen and (max-width: 460px) {
   #header {
     flex-direction: column;
-
+    height: 150px;
     align-items: center;
+  /*  background-image: none;
+    background-color: #f45b69; If we want to change entaire backgound*/
+  }
+  .logo {
+    width: 50px;
+    height: auto;
+    background-image: none;
+    color: #f45b69;
+    
   }
   .nav-links {
     flex-direction: column;
-    padding-left: 10px;
-  }
+    padding-left: 20px;
+      }
   .nav {
     font-size: small;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: fit-content;
+    height: fit-content;
   }
 }
 /*Media Query for header section end*/
@@ -79,6 +97,11 @@ footer {
   font-weight: bolder;
   text-align: center;
   padding: 20px;
+ 
+}
+#footer p {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Style for social media icons */
@@ -89,7 +112,7 @@ footer {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  transition: width 500ms linear 750ms;
+  transition: width 50ms linear 50ms;
 }
 .social-img:hover {
   width: 50px;
@@ -101,12 +124,16 @@ footer {
   font-size: 20px;
   margin: 10px;
 }
+.footer-1 {
+  color: black;
+  text-decoration: none;
+}
 a:hover {
   font-size: larger;
 }
 
 /*Media query sections for footer*/
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 425px) {
   #footer {
     flex-direction: column;
   }
