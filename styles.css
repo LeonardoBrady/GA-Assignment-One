@@ -13,9 +13,10 @@ header {
   display: flex; /* Make the header a flex container */
   justify-content: space-between; /* Space items evenly horizontally */
   align-items:start; /* align items top of basline */
-  background-image: url(./images/background-image.jpg); /*background image */
- background-size: cover;
+  background-image: url(images/background04-1.jpeg); /*background image */
+  background-position: 10%;
   background-repeat: no-repeat;
+  background-size: cover;
   width: auto;
   height: 150px;
 }
@@ -26,7 +27,6 @@ header {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  
 }
 
 /* Style for the navigation links */
@@ -47,25 +47,24 @@ header {
 }
 /*Media Query for header section*/
 @media only screen and (max-width: 460px) {
-  #header{
+  #header {
     flex-direction: column;
-   
+
     align-items: center;
   }
- .nav-links {
+  .nav-links {
     flex-direction: column;
     padding-left: 10px;
-    }
-    .nav {
-      font-size: small;
-    }
- }
- /*Media Query for header section end*/
+  }
+  .nav {
+    font-size: small;
+  }
+}
+/*Media Query for header section end*/
 /*-----------------------------------
  ------------------------------------
  ------------------------------------*/
 /* CSS for the header End */
-
 
 /* Style for the footer */
 footer {
@@ -73,8 +72,9 @@ footer {
   justify-content: space-between; /* Space items evenly horizontally */
   align-items: center; /* Center items vertically */
   width: auto;
-  height: 200px;
-  background-color:  #007bff;
+  height: 150px;
+  background-image: url(./images/small-leaves-flowers-near-slices-fruits.jpg);
+  background-size: cover;
   color: black;
   font-weight: bolder;
   text-align: center;
@@ -116,13 +116,12 @@ a:hover {
 }
 /*Media query sections for footer*/
 
-
 /* Style for the footer End */
 
 /* Overall styling */
 body {
   font-family: "Julius Sans One", sans-serif;
-  background-color: #f4f4f4;
+  background-color: #59c3c3;
   margin: 0;
   padding: 0;
   /* display: flex;
@@ -138,11 +137,9 @@ body {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
- /* border-radius: 8px;
+  /* border-radius: 8px;
   /*border: 1px solid red; /* remove it when finish this part*/
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /*background-color: #fff;*/
-  background-color: #f4b942;
 }
 
 .cart-items {
@@ -150,7 +147,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  background-color: #fff;
   padding: 20px;
 }
 .cart-item {
@@ -164,7 +160,7 @@ body {
   padding: 20px;
   text-align: center;
   max-width: auto;
-  background-color: #f9f9f9;
+  background-color: #ebebeb;
   transition: transform 0.2s;
 }
 
@@ -300,9 +296,7 @@ button:hover {
   /*border: 2px rgb(0, 0, 0) solid;*/
   /*border-radius: 8px;*/
   justify-content: space-evenly;
-  background-color: #f4b942;
- /* background-color: #ffffff;
-  background-image: url(./images/background04-1.jpeg);*/
+  /*background-image: url(./images/background04-1.jpeg);*/
 }
 
 .store-items {
@@ -364,7 +358,7 @@ button:hover {
   font-size: 4rem;
   font-weight: bolder;
   text-align: center;
-  background-color: bisque;
+  background-color: #ebebeb;
   outline: 3px black solid;
   width: fit-content;
   margin: 20px;
@@ -381,12 +375,12 @@ button:hover {
   font-weight: 600;
   margin-top: 32px;
   cursor: pointer;
-  box-shadow: inset 0px 0px 0px #f4b942;
-  transition: all 0.4s ease;
+  box-shadow: inset 0px 0px 0px #59c3c3;
+  transition: all 0.8s ease;
 
   &:hover {
     border: 1px solid rgb(0, 0, 0);
-    box-shadow: inset 0px -80px 0px bisque;
+    box-shadow: inset 0px -80px 0px #f45b69;
     transform: translateY(-5px);
   }
 }
@@ -417,9 +411,9 @@ button:hover {
     padding: 10px 0;
   }
 
-   /* START of styling for store 768px */
+  /* START of styling for store 768px */
 
-   #store {
+  #store {
     width: auto;
     display: flex;
     flex-wrap: wrap;
@@ -430,18 +424,15 @@ button:hover {
     font-size: 3rem;
     letter-spacing: 2px;
   }
-   /* END of styling for store 768px */
-
-
+  /* END of styling for store 768px */
 }
 /* Styling for Mobile-L (425px) */
 @media only screen and (max-width: 425px) {
-     /* START of styling for store 425px */
-    #store h2 {
-      font-size: 2.5rem;
-    }
-     /* END of styling for store 425px */
-   
+  /* START of styling for store 425px */
+  #store h2 {
+    font-size: 2.5rem;
+  }
+  /* END of styling for store 425px */
 }
 /* Styling for Mobile-S (320px) */
 @media only screen and (max-width: 320px) {
@@ -450,20 +441,19 @@ button:hover {
     font-size: 2rem;
   }
   /* END of styling for store 320px */
- }
+}
 
 /* style for bigger screen */
 
 @media only screen and (max-width: 1366px) {
-   /* START of styling for store 1366px */
+  /* START of styling for store 1366px */
   #store {
     padding: 50px;
     height: auto;
     margin: auto;
     flex-direction: row;
   }
- /* END of styling for store 1366px */
-
+  /* END of styling for store 1366px */
 }
 
 /* cart section css ends here */
