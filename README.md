@@ -10,7 +10,7 @@ Easy Checkout: A straightforward checkout process.
 Responsive Design: The website is designed to work seamlessly on both desktop and mobile devices.
 
 Usage
-Visit the website at https://shihuaxie.github.io/GA-Assignment-One/ OR  https://leonardobrady.github.io/GA-Assignment-One/.
+Visit the website at https://shihuaxie.github.io/GA-Assignment-One/ & https://leonardobrady.github.io/GA-Assignment-One/ OR https://praseens.github.io/GA-Assignment-One/.
 Browse through the assortment of fruits.
 Select the fruits you want and add them to your cart.
 Proceed to checkout and follow the simple steps to place your order.
@@ -26,3 +26,7 @@ Group Project by: Praseen, Sylvia & Liam.
 Project title: JuicyJunction.
 
 Project description: We decided to make a fruit shop website with only html/css for our Group Assignment.
+
+Our group project Wireframe:
+
+![screen-shot-of-wireframe](images/wireframe-gp.png)
