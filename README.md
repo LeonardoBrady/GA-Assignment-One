@@ -27,4 +27,6 @@ Project title: JuicyJunction.
 
 Project description: We decided to make a fruit shop website with only html/css for our Group Assignment.
 
-Our group project Wireframe:![screen-shot-of-wireframe](images/wireframe-gp.png)
+Our group project Wireframe:
+
+![screen-shot-of-wireframe](images/wireframe-gp.png)
