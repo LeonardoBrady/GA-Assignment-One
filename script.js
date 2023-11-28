@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Function to update the date and time
 function updateDateTime() {
     var currentDate = new Date();
@@ -15,7 +15,7 @@ function updateDateTime() {
 
   // Update date and time every second (1000 milliseconds)
   setInterval(updateDateTime, 1000);
-=======
+
 let addToCartBTN = document.getElementsByClassName('addToCart')
   console.log(addToCartBTN)
 
@@ -39,4 +39,4 @@ function addItemToCart(title, price, imageSrc){
   cart.inner = title
   const cartItems = document.getElementsByClassName('cart')[0]
 }
->>>>>>> 781aaee45335aae0bbdb75dbdf624d5b5cc04d90
+
