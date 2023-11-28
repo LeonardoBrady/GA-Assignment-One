@@ -18,10 +18,16 @@ function updateDateTime() {
 
 
 
+  const products = [
+    { id: 1, name: 'Potato', price: 2.50 },
+    { id: 2, name: 'Worm', price: 1.00},
+    { id: 3, name: 'Grass', price: 9.50 },
+    { id: 4, name: 'Dirt', price: 0.50 },
+    { id: 5, name: 'StarDust', price: 9.99 },
+    { id: 6, name: 'SunSyrup', price: 8.88 },
+  ];
 
-
-
-
+  
 // This adds functionality to the Remove buttons & updates the carts total.
 const removeCartItemButton = document.getElementsByClassName('remove-item-btn')
 console.log(removeCartItemButton)
@@ -100,3 +106,42 @@ function addItemToCart(title, price, imageSrc){
   cartItems.append(cartRow)
 }
 
+// Function to render shop items to the DOM
+function renderShopItems() {
+  const storeItemsContainer = document.querySelector('.store-items');
+
+  // Goes through the products array
+  products.forEach(product => {
+    const productDiv = document.createElement('div');
+    productDiv.classList.add(`product-${product.id}`);
+
+    // Creates HTML content for the product
+    productDiv.innerHTML = `
+      <img class="productImages" src="./images/${product.name.toLowerCase()}.jpeg"/>
+      <p class="price" style="background-color: #f0f0f0; color: #333; padding-right: 53px; border-radius: 5px;">$${product.price.toFixed(2)}</p>
+      <br />
+      <p class="product-name cart-item-title">${product.name}</p>
+      <p><button class="addToCart" type="button">Add to Cart</button></p>
+      <p>
+        QTY:
+        <input
+          class="product-quantity"
+          type="tel"
+          name="quantity"
+          maxlength="1"
+          value="1"
+        />
+      </p>
+    `;
+
+    // Adds click event listener to the "Add to Cart" button
+    const addToCartButton = productDiv.querySelector('.addToCart');
+    addToCartButton.addEventListener('click', addToCartClicked);
+
+    // Append the product to the store items container
+    storeItemsContainer.appendChild(productDiv);
+  });
+}
+
+// Calls the renderShopItems function to display shop items initially
+renderShopItems();
