@@ -131,9 +131,11 @@ function renderShopItems() {
     const productDiv = document.createElement('div');
     productDiv.classList.add(`product-${product.id}`);
 
+    let imagesForDom = 
+
     // Creates HTML content for the product
     productDiv.innerHTML = `
-      <img class="productImages" src="./images/${product.name.toLowerCase()}.jpeg"/>
+      <img class="productImages" src="./images/${product.name}.jpeg"/>
       <p class="price" style=" background-color: #f0f0f0; color: #333; padding-right: -5px; border-radius: 5px;">$${product.price.toFixed(2)}</p>
       <br />
       <p class="product-name cart-item-title">${product.name}</p>
