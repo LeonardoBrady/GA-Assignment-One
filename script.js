@@ -18,14 +18,7 @@ function updateDateTime() {
 
 
 
-  const products = [
-    { id: 1, name: 'Potato', price: 2.50 },
-    { id: 2, name: 'Worm', price: 1.00},
-    { id: 3, name: 'Grass', price: 9.50 },
-    { id: 4, name: 'Dirt', price: 0.50 },
-    { id: 5, name: 'StarDust', price: 9.99 },
-    { id: 6, name: 'SunSyrup', price: 8.88 },
-  ];
+  
 
   
 // This adds functionality to the Remove buttons & updates the carts total.
@@ -106,6 +99,17 @@ function addItemToCart(title, price, imageSrc){
   cartItems.append(cartRow)
 }
 
+
+//DOM Objects
+const products = [
+  { id: 1, name: 'Potato', price: 2.50 },
+  { id: 2, name: 'Peach', price: 1.00},
+  { id: 3, name: 'Tomato', price: 9.50 },
+  { id: 4, name: 'Banana', price: 0.50 },
+  { id: 5, name: 'Strawberry', price: 5.45 },
+  { id: 6, name: 'Apple', price: 3.55 },
+];
+
 // Function to render shop items to the DOM
 function renderShopItems() {
   const storeItemsContainer = document.querySelector('.store-items');
@@ -118,7 +122,7 @@ function renderShopItems() {
     // Creates HTML content for the product
     productDiv.innerHTML = `
       <img class="productImages" src="./images/${product.name.toLowerCase()}.jpeg"/>
-      <p class="price" style="background-color: #f0f0f0; color: #333; padding-right: 53px; border-radius: 5px;">$${product.price.toFixed(2)}</p>
+      <p class="price" style=" background-color: #f0f0f0; color: #333; padding-right: -5px; border-radius: 5px;">$${product.price.toFixed(2)}</p>
       <br />
       <p class="product-name cart-item-title">${product.name}</p>
       <p><button class="addToCart" type="button">Add to Cart</button></p>
