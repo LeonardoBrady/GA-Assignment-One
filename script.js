@@ -1,4 +1,4 @@
-
+//Praseen Datatime code
 // Function to update the date and time
 function updateDateTime() {
     var currentDate = new Date();
@@ -15,6 +15,37 @@ function updateDateTime() {
 
   // Update date and time every second (1000 milliseconds)
   setInterval(updateDateTime, 1000);
+
+//Praseen Datatime code End
+
+
+   // Function to fetch data from the API and update the webpage
+   async function fetchAndDisplayNames() {
+    try {
+      const response = await fetch('https://onlineprojectsgit.github.io/API/WDEndpoint.json');
+      const data = await response.json();
+
+      // Assuming the API response is an array of names
+      const allNames = data.info.learners;
+
+      // Names you are interested in
+      const desiredNames = ['Praseen Shamakura', 'Liam Allen', 'Shihua Xie'];
+
+      // Filter the API response based on desired names
+      const selectedNames = allNames.filter(name => desiredNames.includes(name));
+
+      // Update the HTML content with the selected names
+      const nameListElement = document.getElementById('names');
+      nameListElement.innerHTML = selectedNames.map(name => `&copy;${name}`).join(', ');
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  // Call the fetchAndDisplayNames function to fetch and display names
+  fetchAndDisplayNames();
+
+
 
 let addToCartBTN = document.getElementsByClassName('addToCart')
   console.log(addToCartBTN)

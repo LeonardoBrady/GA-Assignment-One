@@ -3,27 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Display Names from API</title>
+  <title>Display Specific Names from API</title>
 </head>
 <body>
 
-  <h1>Names from API:</h1>
+  <h1>Selected Names from API:</h1>
   <ul id="nameList"></ul>
 
   <script>
     // Function to fetch data from the API and update the webpage
     async function fetchAndDisplayNames() {
       try {
-        // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint that provides the names
+        //* Replace 'YOUR_API_ENDPOINT' with the actual API endpoint that provides the names*/
         const response = await fetch('https://onlineprojectsgit.github.io/API/WDEndpoint.json');
         const data = await response.json();
 
         // Assuming the API response is an array of names
-        const names = data.info.learners;
+        const allNames = data.info.learners;
 
-        // Update the HTML content with the fetched names
+        // Names you are interested in
+        const desiredNames = ['Praseen Shamakura', 'Liam Allen', 'Shihua Xie'];
+
+        // Filter the API response based on desired names
+        const selectedNames = allNames.filter(name => desiredNames.includes(name));
+
+        // Update the HTML content with the selected names
         const nameListElement = document.getElementById('nameList');
-        nameListElement.innerHTML = names.map(name => `<li>${name}</li>`).join('');
+        nameListElement.innerHTML = selectedNames.map(name => `<li>${name}</li>`).join('');
       } catch (error) {
         console.error('Error fetching data:', error);
       }
