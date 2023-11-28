@@ -52,7 +52,7 @@
           <img class="productImages" src="./images/blueberry.jpeg" alt="Blueberrys" />
           <p class="price">$2.50</p>
           <br />
-          <p class="product-name">Blueberry 170g</p>
+          <p class="product-name cart-item-title">Blueberry 170g</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
           <!-- I had to use type='tel' because type='number' does not let me set max length, but 'tel' allows other charaters sadly-->
           <p>
@@ -71,7 +71,7 @@
           <img class="productImages" src="./images/cherry.jpeg" alt="Cherrys" />
           <p class="price-extra price">$105/BOX</p>
           <br />
-          <p class="product-name">Premium Cherry</p>
+          <p class="product-name cart-item-title">Premium Cherry</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
           <p>
             QTY:
@@ -89,7 +89,7 @@
           <img class="productImages" src="./images/orange.jpeg" alt="Orange" />
           <p class="price">$4.50</p>
           <br />
-          <p class="product-name">Orange Loose</p>
+          <p class="product-name cart-item-title">Orange Loose</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
           <p>
             QTY:
@@ -107,7 +107,7 @@
           <img class="productImages" src="./images/pineapple.png" alt="Pineapple" />
           <p class="price-extra price">$5.50/EA</p>
           <br />
-          <p class="product-name">Sweet Pineapple</p>
+          <p class="product-name cart-item-title">Sweet Pineapple</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
           <p>
             QTY:
@@ -125,7 +125,7 @@
           <img class="productImages" src="./images/avocado.webp" alt="avocado" />
           <p class="price">$3.25</p>
           <br />
-          <p class="product-name">Avocado</p>
+          <p class="product-name cart-item-title">Avocado</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
           <p>
             QTY:
@@ -173,59 +173,59 @@
         <!-- Cart Item 1 -->
         <div class="cart-item">
           <img src="./images/cherry.jpeg" alt="cherry" />
-          <h2>Premium Cherry</h2>
-          <p>Total: $105</p>
+          <h2 class="cart-item-title">Premium Cherry</h2>
+          <p class="cart-item-total">Total: $105</p>
           <!-- cart QTY part -->
           <div class="quantity-control">
             <button class="quantity-btn minus">-</button>
             <input type="number" class="quantity" value="1" min="1" />
             <button class="quantity-btn plus">+</button>
           </div>
-          <button>Remove</button>
+          <button class="remove-item-btn">Remove</button>
         </div>
         <!-- Cart Item 2 -->
         <div class="cart-item">
           <img src="./images/pineapple.png" alt="pineapple" />
-          <h2>Sweet Pineapple</h2>
-          <p>Total: $5.50</p>
+          <h2 class="cart-item-title">Sweet Pineapple</h2>
+          <p class="cart-item-total">Total: $5.50</p>
           <!-- cart QTY part -->
           <div class="quantity-control">
             <button class="quantity-btn minus">-</button>
             <input type="number" class="quantity" value="1" min="1" />
             <button class="quantity-btn plus">+</button>
           </div>
-          <button>Remove</button>
+          <button class="remove-item-btn">Remove</button>
         </div>
         <!-- Cart Item 3 -->
         <div class="cart-item">
           <img src="./images/orange.jpeg" alt="orange" />
-          <h2>Orange Loose</h2>
-          <p>Total: $4.50</p>
+          <h2 class="cart-item-title">Orange Loose</h2>
+          <p class="cart-item-total">Total: $4.50</p>
           <!-- cart QTY part -->
           <div class="quantity-control">
             <button class="quantity-btn minus">-</button>
             <input type="number" class="quantity" value="1" min="1" />
             <button class="quantity-btn plus">+</button>
           </div>
-          <button>Remove</button>
+          <button class="remove-item-btn">Remove</button>
         </div>
         <!-- Cart Item 4 -->
         <div class="cart-item">
           <img src="./images/blueberry.jpeg" alt="blueberry" />
-          <h2>Blueberry 170g</h2>
-          <p>Total: $2.50</p>
+          <h2 class="cart-item-title">Blueberry 170g</h2>
+          <p class="cart-item-total">Total: $2.50</p>
           <!-- cart QTY part -->
           <div class="quantity-control">
             <button class="quantity-btn minus">-</button>
             <input type="number" class="quantity" value="1" min="1" />
             <button class="quantity-btn plus">+</button>
           </div>
-          <button>Remove</button>
+          <button class="remove-item-btn">Remove</button>
         </div>
       </div>
       <!-- Cart total price -->
       <div class="cart-total">
-        <p>Cart Total Price: $117.50</p>
+        <p class="cart-final-total">Cart Total Price: $117.50</p>
         <button class="clear-cart-btn">Clear cart</button>
         <button>Pay Now</button>
       </div>
