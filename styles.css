@@ -13,6 +13,10 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+#datetime{
+  background-color: #59c3c3;
+  color: #f45b69;
+}
 /* CSS for the header */
 header {
   padding: 10px;
