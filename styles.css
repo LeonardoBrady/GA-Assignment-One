@@ -13,6 +13,8 @@ body {
   padding: 0;
   min-height: 100vh;
 }
+/*Added Date the header and given these styles*/
+
 /* CSS for the header */
 header {
   padding: 10px;
@@ -31,6 +33,13 @@ header {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+#datetime{
+  background-color: #59c3c3;
+  color: #f45b69;
+  }
+#datetime:hover{
+  font-size: x-large;
 }
 
 /* Style for the navigation links */
