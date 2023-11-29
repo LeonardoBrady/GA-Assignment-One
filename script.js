@@ -113,11 +113,15 @@ function addItemToCart(title, price, imageSrc) {
       return;
     }
   }
+
+  // Extract only the numeric part of the price
+  let numericPrice = parseFloat(price.replace(/[^\d.]/g, ""));
+
   //render new added item to cart section.
   let cartRowContents = `
       <img src="${imageSrc}"/>
       <h2 class="cart-item-title">${title}</h2>
-      <p class="cart-item-total">Total: ${price}</p>
+      <p class="cart-item-total">Total: $${numericPrice}</p>
       <!-- cart QTY part -->
       <div class="quantity-control">
         <button class="quantity-btn minus">-</button>
