@@ -1,10 +1,9 @@
-
 // Function to update the date and time
 function updateDateTime() {
-    var currentDate = new Date();
+  var currentDate = new Date();
 
-    // Format the date and time as per your requirement
-    var formattedDateTime = currentDate.toLocaleString(); // You can customize the format here
+  // Format the date and time as per your requirement
+  var formattedDateTime = currentDate.toLocaleString(); // You can customize the format here
 
   // Update the content of the HTML element with id 'datetime'
   document.getElementById("datetime").innerHTML = formattedDateTime;
@@ -16,12 +15,62 @@ updateDateTime();
 // Update date and time every second (1000 milliseconds)
 setInterval(updateDateTime, 1000);
 
-let addToCartBTN = document.getElementsByClassName('addToCart')
-  console.log(addToCartBTN)
+//task 7: have a remove from cart button that removes the items from cart+update cart total price
 
-for(let i = 0; i < addToCartBTN.length; i++) {
-  let button = addToCartBTN[i]
-  button.addEventListener('click', addToCartClicked)
+// const removeCartItemButton = document.getElementsByClassName("remove-item-btn");
+// console.log(removeCartItemButton);
+// for (let i = 0; i < removeCartItemButton.length; i++) {
+//   const button = removeCartItemButton[i];
+//   button.addEventListener("click", function (event) {
+//     const buttonClicked = event.target;
+//     buttonClicked.parentElement.remove();
+//     updateCartTotal();
+//   });
+// }
+function removeCartItemButton(button) {
+  var cartItem = button.closest(".cart-item");
+  cartItem.remove();
+  updateCartTotal(); // Update the cart total after removing an item
+}
+
+// Attach the function to the "Remove" buttons
+document.addEventListener("click", function (event) {
+  if (
+    event.target &&
+    event.target.tagName === "BUTTON" &&
+    event.target.textContent === "Remove"
+  ) {
+    removeCartItemButton(event.target);
+  }
+  //remember to updateCartTotal after ADD or REMOVE items.
+  updateCartTotal();
+});
+
+//Updates carts total
+function updateCartTotal() {
+  const cartItemContainer = document.getElementsByClassName("cart-items")[0];
+  const cartRows = cartItemContainer.getElementsByClassName("cart-item");
+  let total = 0;
+  for (let i = 0; i < cartRows.length; i++) {
+    const cartRow = cartRows[i];
+    let priceElement = cartRow.getElementsByClassName("cart-item-total")[0];
+    let quantityElement = cartRow.getElementsByClassName("quantity")[0];
+    let price = parseFloat(priceElement.innerText.replace("Total: $", ""));
+    let quantity = quantityElement.value;
+    total = total + price * quantity;
+  }
+  document.getElementsByClassName("cart-final-total")[0].innerText =
+    "Cart Total Price: $" + total;
+}
+
+//Variable for CLASS="addToCart"
+let addToCartBTN = document.getElementsByClassName("addToCart");
+console.log(addToCartBTN);
+
+//For every click on Add to Cart on store, it then logs that item.
+for (let i = 0; i < addToCartBTN.length; i++) {
+  let button = addToCartBTN[i];
+  button.addEventListener("click", addToCartClicked);
 }
 //Stores elements by class to a few variables.
 function addToCartClicked(event) {
@@ -82,9 +131,11 @@ function renderShopItems() {
     const productDiv = document.createElement('div');
     productDiv.classList.add(`product-${product.id}`);
 
+    let imagesForDom = 
+
     // Creates HTML content for the product
     productDiv.innerHTML = `
-      <img class="productImages" src="./images/${product.name.toLowerCase()}.jpeg"/>
+      <img class="productImages" src="./images/${product.name}.jpeg"/>
       <p class="price" style=" background-color: #f0f0f0; color: #333; padding-right: -5px; border-radius: 5px;">$${product.price.toFixed(2)}</p>
       <br />
       <p class="product-name cart-item-title">${product.name}</p>
