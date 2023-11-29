@@ -263,7 +263,6 @@ function clearCart() {
 // clear existing cart items
 function clearCartItems() {
   const cartItemsContainer = document.getElementsByClassName("cart-items")[0];
-  // Remove all cart items from the container
   // Check if the cart is already empty
   if (cartItemsContainer.children.length === 0) {
     alert("The cart is already empty!");
