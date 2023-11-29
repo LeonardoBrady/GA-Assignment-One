@@ -31,7 +31,7 @@ fetchAndDisplayNames();
 
 // Remove Item From Cart Button
 function removeCartItemButton(button) {
-  var cartItem = button.closest(".cart-item");
+  const cartItem = button.closest(".cart-item");
   cartItem.remove();
   saveCartToLocalStorage(); // Save the updated cart to local storage
   updateCartTotal(); // Update the cart total after removing an item
@@ -239,4 +239,14 @@ function clearCartItems() {
   while (cartItemsContainer.firstChild) {
     cartItemsContainer.removeChild(cartItemsContainer.firstChild);
   }
+}
+
+
+//Alerts user when payment is processed.
+function payNow() {
+  // Add your payment logic or any other actions here
+  alert("Payment successful! Thank you for shopping!");
+  
+    // Clear the cart (you can customize this part based on your actual implementation)
+    clearCart();
 }
