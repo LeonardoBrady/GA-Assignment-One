@@ -40,10 +40,7 @@ header {
   color:#fff;
   font-weight: bold;
   background-color: #59c3c3;
- position: relative;
- left: 1100px;
-  
-}
+ }
 /* Style for the navigation links */
 .nav-links {
   list-style: none;
@@ -58,6 +55,7 @@ header {
 }
 .nav-links li {
   margin-right: 20px;
+ 
 }
 
 .nav-links a {
