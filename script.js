@@ -231,3 +231,22 @@ function renderShopItems() {
 
 // Calls the renderShopItems function to display shop items initially
 renderShopItems();
+
+// clear cart function
+function clearCart() {
+  // Clear existing cart items
+  clearCartItems();
+  // Save the updated cart to local storage
+  saveCartToLocalStorage();
+  // Update the cart total after clearing the cart
+  updateCartTotal();
+}
+
+// clear existing cart items
+function clearCartItems() {
+  const cartItemsContainer = document.getElementsByClassName("cart-items")[0];
+  // Remove all cart items from the container
+  while (cartItemsContainer.firstChild) {
+    cartItemsContainer.removeChild(cartItemsContainer.firstChild);
+  }
+}
