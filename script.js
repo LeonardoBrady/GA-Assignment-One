@@ -125,13 +125,43 @@ function addItemToCart(title, price, imageSrc) {
       <!-- cart QTY part -->
       <div class="quantity-control">
         <button class="quantity-btn minus">-</button>
-        <input type="number" class="quantity" value="1" min="1" />
+        <input type="text" class="quantity" value="1" maxlength="1" min="1" max="9" oninput="this.value=this.value.replace(/[^1-9]/g,'');" />
         <button class="quantity-btn plus">+</button>
       </div>
       <button class="remove-item-btn">Remove</button>
   `;
   cartRow.innerHTML = cartRowContents;
   cartItems.append(cartRow);
+
+   // Add event listeners to plus and minus buttons
+   const minusButton = cartRow.querySelector(".minus");
+   const plusButton = cartRow.querySelector(".plus");
+   const quantityInput = cartRow.querySelector(".quantity");
+ 
+   minusButton.addEventListener("click", function () {
+    // Decrement the value and make sure it doesn't go below the minimum value (1)
+    const currentQuantity = parseInt(quantityInput.value);
+    if (currentQuantity > 1) {
+      quantityInput.value = currentQuantity - 1;
+      updateCartItemTotal(cartRow, numericPrice, quantityInput.value);
+      saveCartToLocalStorage();
+    } else {
+      alert("Minimum quantity reached (1)");
+    }
+  });
+ 
+   plusButton.addEventListener("click", function () {
+     // Increment the value, but don't allow it to go past 9
+     const currentQuantity = parseInt(quantityInput.value);
+     if (currentQuantity < 9) {
+       quantityInput.value = currentQuantity + 1;
+       updateCartItemTotal(cartRow, numericPrice, quantityInput.value);
+       saveCartToLocalStorage();
+     } else {
+       alert("Maximum quantity reached (9)");
+     }
+   });
+ 
   saveCartToLocalStorage(); // Save the updated cart to local storage
 }
 
@@ -234,6 +264,11 @@ function clearCart() {
 function clearCartItems() {
   const cartItemsContainer = document.getElementsByClassName("cart-items")[0];
   // Remove all cart items from the container
+  // Check if the cart is already empty
+  if (cartItemsContainer.children.length === 0) {
+    alert("The cart is already empty!");
+    return; // Exit the function if the cart is already empty
+  }
   while (cartItemsContainer.firstChild) {
     cartItemsContainer.removeChild(cartItemsContainer.firstChild);
   }
