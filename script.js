@@ -31,7 +31,7 @@ fetchAndDisplayNames();
 
 // Remove Item From Cart Button
 function removeCartItemButton(button) {
-  var cartItem = button.closest(".cart-item");
+  const cartItem = button.closest(".cart-item");
   cartItem.remove();
   saveCartToLocalStorage(); // Save the updated cart to local storage
   updateCartTotal(); // Update the cart total after removing an item
@@ -208,16 +208,6 @@ function renderShopItems() {
       <br />
       <p class="product-name cart-item-title">${product.name}</p>
       <p><button class="addToCart" type="button">Add to Cart</button></p>
-      <p>
-        QTY:
-        <input
-          class="product-quantity"
-          type="tel"
-          name="quantity"
-          maxlength="1"
-          value="1"
-        />
-      </p>
     `);
 
     // Adds click event listener to the "Add to Cart" button
@@ -249,4 +239,14 @@ function clearCartItems() {
   while (cartItemsContainer.firstChild) {
     cartItemsContainer.removeChild(cartItemsContainer.firstChild);
   }
+}
+
+
+//Alerts user when payment is processed.
+function payNow() {
+  // Add your payment logic or any other actions here
+  alert("Payment successful! Thank you for shopping!");
+  
+    // Clear the cart (you can customize this part based on your actual implementation)
+    clearCart();
 }

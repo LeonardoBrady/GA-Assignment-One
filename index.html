@@ -63,16 +63,6 @@
           <p class="product-name cart-item-title">Blueberry 170g</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
           <!-- I had to use type='tel' because type='number' does not let me set max length, but 'tel' allows other charaters sadly-->
-          <p>
-            QTY:
-            <input
-              class="product-quantity"
-              type="tel"
-              name="quantity"
-              maxlength="1"
-              value="1"
-            />
-          </p>
         </div>
         <!-- Store Item 2 -->
         <div class="product-2">
@@ -81,16 +71,6 @@
           <br />
           <p class="product-name cart-item-title">Premium Cherry</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
-          <p>
-            QTY:
-            <input
-              class="product-quantity"
-              type="tel"
-              name="quantity"
-              maxlength="1"
-              value="1"
-            />
-          </p>
         </div>
         <!-- Store Item 3 -->
         <div class="product-3">
@@ -99,16 +79,6 @@
           <br />
           <p class="product-name cart-item-title">Orange Loose</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
-          <p>
-            QTY:
-            <input
-              class="product-quantity"
-              type="tel"
-              name="quantity"
-              maxlength="1"
-              value="1"
-            />
-          </p>
         </div>
         <!-- Store Item 4 -->
         <div class="product-4">
@@ -121,16 +91,6 @@
           <br />
           <p class="product-name cart-item-title">Sweet Pineapple</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
-          <p>
-            QTY:
-            <input
-              class="product-quantity"
-              type="tel"
-              name="quantity"
-              maxlength="1"
-              value="1"
-            />
-          </p>
         </div>
         <!-- Store Item 5 -->
         <div class="product-5">
@@ -143,15 +103,6 @@
           <br />
           <p class="product-name cart-item-title">Avocado</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
-          <p>
-            QTY:
-            <input
-              class="product-quantity"
-              type="tel"
-              name="quantity"
-              maxlength="1"
-            />
-          </p>
         </div>
         <!-- Store Item 6 -->
         <div class="product-6">
@@ -164,15 +115,6 @@
           <br />
           <p class="product-name">Mango</p>
           <p><button class="addToCart" type="button">Add to Cart</button></p>
-          <p>
-            QTY:
-            <input
-              class="product-quantity"
-              type="tel"
-              name="quantity"
-              maxlength="1"
-            />
-          </p>
         </div>
       </div>
       <h2>Max Quantity per item: 9</h2>
@@ -247,7 +189,7 @@
       <div class="cart-total">
         <p class="cart-final-total">Cart Total Price: $117.50</p>
         <button class="clear-cart-btn" onclick="clearCart()">Clear cart</button>
-        <button>Pay Now</button>
+        <button onclick="payNow()">Pay Now</button>
       </div>
     </section>
     <!-- CART ends  -->
