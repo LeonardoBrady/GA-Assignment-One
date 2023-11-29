@@ -25,6 +25,8 @@
         <figcaption id="datetime"></figcaption>
       </figure>
             <ul class="nav-links">
+      <img src="images/logo1.png" class="logo" alt="logo image" />
+      <ul class="nav-links">
         <li>
           <a href="#index">
             <button class="nav">HOME</button>
@@ -40,6 +42,9 @@
             <button class="nav">CART</button>
           </a>
         </li>
+        <li>
+          <button calss="nav" id="datetime"></button>
+        </li>
                   
       </ul>
     </header>
@@ -51,7 +56,11 @@
       <div class="store-items">
         <!-- Store Item 1 -->
         <div class="product-1">
-          <img class="productImages" src="./images/blueberry.jpeg" alt="Blueberrys" />
+          <img
+            class="productImages"
+            src="./images/blueberry.jpeg"
+            alt="Blueberrys"
+          />
           <p class="price">$2.50</p>
           <br />
           <p class="product-name cart-item-title">Blueberry 170g</p>
@@ -106,7 +115,11 @@
         </div>
         <!-- Store Item 4 -->
         <div class="product-4">
-          <img class="productImages" src="./images/pineapple.png" alt="Pineapple" />
+          <img
+            class="productImages"
+            src="./images/pineapple.png"
+            alt="Pineapple"
+          />
           <p class="price-extra price">$5.50/EA</p>
           <br />
           <p class="product-name cart-item-title">Sweet Pineapple</p>
@@ -124,7 +137,11 @@
         </div>
         <!-- Store Item 5 -->
         <div class="product-5">
-          <img class="productImages" src="./images/avocado.webp" alt="avocado" />
+          <img
+            class="productImages"
+            src="./images/avocado.webp"
+            alt="avocado"
+          />
           <p class="price">$3.25</p>
           <br />
           <p class="product-name cart-item-title">Avocado</p>
@@ -141,7 +158,11 @@
         </div>
         <!-- Store Item 6 -->
         <div class="product-6">
-          <img class="productImages" src="./images/cuteFruitMango.jpg" alt="Mango" />
+          <img
+            class="productImages"
+            src="./images/cuteFruitMango.jpg"
+            alt="Mango"
+          />
           <p class="price">$6.75</p>
           <br />
           <p class="product-name">Mango</p>
@@ -228,7 +249,7 @@
       <!-- Cart total price -->
       <div class="cart-total">
         <p class="cart-final-total">Cart Total Price: $117.50</p>
-        <button class="clear-cart-btn">Clear cart</button>
+        <button class="clear-cart-btn" onclick="clearCart()">Clear cart</button>
         <button>Pay Now</button>
       </div>
     </section>
