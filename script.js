@@ -244,9 +244,20 @@ function clearCartItems() {
 
 //Alerts user when payment is processed.
 function payNow() {
-  // Add your payment logic or any other actions here
-  alert("Payment successful! Thank you for shopping!");
+  {
+    // Check if there is at least one item in the cart
+    const cartItems = document.getElementsByClassName("cart-item");
+    
+    if (cartItems.length > 0) {
+      // Add your payment logic or any other actions here
+      alert("Payment successful! Thank you for shopping!");
+      
+      // Clear the cart (you can customize this part based on your actual implementation)
+      clearCart();
+    } else {
+      // Display an alert if the cart is empty
+      alert("Please add at least one item to the cart before proceeding with payment.");
+    }
+  }
   
-    // Clear the cart (you can customize this part based on your actual implementation)
-    clearCart();
 }
