@@ -33,13 +33,10 @@ header {
   width: 100px;
   height: 100px;
   border-radius: 50%;
- 
- 
-}
+ }
 #datetime{
   color:#fff;
   font-weight: bold;
-  background-color: #59c3c3;
  }
 /* Style for the navigation links */
 .nav-links {
@@ -87,13 +84,7 @@ header {
     width: fit-content;
     height: fit-content;
   }
-  #datetime{
-    font-size: small;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    width: fit-content;
-    height: fit-content;
-  }
+  
 }
 /* CSS for the header End */
 
