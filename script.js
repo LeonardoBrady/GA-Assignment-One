@@ -208,16 +208,6 @@ function renderShopItems() {
       <br />
       <p class="product-name cart-item-title">${product.name}</p>
       <p><button class="addToCart" type="button">Add to Cart</button></p>
-      <p>
-        QTY:
-        <input
-          class="product-quantity"
-          type="tel"
-          name="quantity"
-          maxlength="1"
-          value="1"
-        />
-      </p>
     `);
 
     // Adds click event listener to the "Add to Cart" button
