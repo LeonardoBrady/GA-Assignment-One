@@ -197,8 +197,6 @@ function renderShopItems() {
   products.forEach((product) => {
     const productDiv = document.createElement("div");
     productDiv.classList.add(`product-${product.id}`);
-
-    let imagesForDom =
       // Creates HTML content for the product
       (productDiv.innerHTML = `
       <img class="productImages" src="./images/${product.name}.jpeg"/>
