@@ -1,19 +1,30 @@
+
 // Function to update the date and time
 function updateDateTime() {
-  var currentDate = new Date();
-
-  // Format the date and time as per your requirement
-  var formattedDateTime = currentDate.toLocaleString(); // You can customize the format here
-
-  // Update the content of the HTML element with id 'datetime'
-  document.getElementById("datetime").innerHTML = formattedDateTime;
+   let currentDate = new Date(); 
+   let formattedDateTime = currentDate.toLocaleString(); 
+   document.getElementById('datetime').innerHTML = formattedDateTime;
 }
+   updateDateTime();
+   setInterval(updateDateTime, 1000);
+  
+ 
+// Function to fetch data from the API and update the webpage
+async function fetchAndDisplayNames() {
+  try {
+   const response = await fetch('https://onlineprojectsgit.github.io/API/WDEndpoint.json');
+   const data = await response.json();
+   const allNames = data.info.learners;
+   const desiredNames = ['Praseen Shamakura', 'Liam Allen', 'Shihua Xie'];
+   const selectedNames = allNames.filter(name => desiredNames.includes(name));
+  const nameListElement = document.getElementById('names');
+   nameListElement.innerHTML = selectedNames.map(name => `&copy;${name}`).join(', ');
+   } catch (error) {
+  console.error('Error fetching data:', error);
+   }
+}
+    fetchAndDisplayNames();
 
-// Call the updateDateTime function to display date and time initially
-updateDateTime();
-
-// Update date and time every second (1000 milliseconds)
-setInterval(updateDateTime, 1000);
 
 //task 7: have a remove from cart button that removes the items from cart+update cart total price
 
