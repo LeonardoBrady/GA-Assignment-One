@@ -142,7 +142,7 @@ function addItemToCart(title, price, imageSrc) {
     const currentQuantity = parseInt(quantityInput.value);
     if (currentQuantity > 1) {
       quantityInput.value = currentQuantity - 1;
-      updateCartItemTotal(cartRow, numericPrice, quantityInput.value);
+      //updateCartTotal(cartRow, numericPrice, quantityInput.value);
       saveCartToLocalStorage();
     } else {
       alert("Minimum quantity reached (1)");
@@ -154,7 +154,7 @@ function addItemToCart(title, price, imageSrc) {
      const currentQuantity = parseInt(quantityInput.value);
      if (currentQuantity < 9) {
        quantityInput.value = currentQuantity + 1;
-       updateCartItemTotal(cartRow, numericPrice, quantityInput.value);
+       //updateCartTotal(cartRow, numericPrice, quantityInput.value);
        saveCartToLocalStorage();
      } else {
        alert("Maximum quantity reached (9)");
