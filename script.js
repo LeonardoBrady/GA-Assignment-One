@@ -81,7 +81,6 @@ function updateCartTotal() {
 
 //Variable for CLASS="addToCart"
 let addToCartBTN = document.getElementsByClassName("addToCart");
-// console.log(addToCartBTN);
 
 //For every click on Add to Cart on store, it then logs that item.
 for (let i = 0; i < addToCartBTN.length; i++) {
@@ -121,7 +120,7 @@ function addItemToCart(title, price, imageSrc) {
   let cartRowContents = `
       <img src="${imageSrc}"/>
       <h2 class="cart-item-title">${title}</h2>
-      <p class="cart-item-total">Total: $${numericPrice}</p>
+      <p class="cart-item-total">Per Item: $${numericPrice}</p>
       <!-- cart QTY part -->
       <div class="quantity-control">
         <button class="quantity-btn minus">-</button>
@@ -143,7 +142,7 @@ function addItemToCart(title, price, imageSrc) {
     const currentQuantity = parseInt(quantityInput.value);
     if (currentQuantity > 1) {
       quantityInput.value = currentQuantity - 1;
-      updateCartItemTotal(cartRow, numericPrice, quantityInput.value);
+      //updateCartTotal(cartRow, numericPrice, quantityInput.value);
       saveCartToLocalStorage();
     } else {
       alert("Minimum quantity reached (1)");
@@ -155,7 +154,7 @@ function addItemToCart(title, price, imageSrc) {
      const currentQuantity = parseInt(quantityInput.value);
      if (currentQuantity < 9) {
        quantityInput.value = currentQuantity + 1;
-       updateCartItemTotal(cartRow, numericPrice, quantityInput.value);
+       //updateCartTotal(cartRow, numericPrice, quantityInput.value);
        saveCartToLocalStorage();
      } else {
        alert("Maximum quantity reached (9)");
@@ -230,9 +229,9 @@ function renderShopItems() {
       // Creates HTML content for the product
       (productDiv.innerHTML = `
       <img class="productImages" src="./images/${product.name}.jpeg"/>
-      <p class="price" style=" background-color: #f0f0f0; color: #333; padding-right: -5px; border-radius: 5px;">$${product.price.toFixed(
-        2
-      )}</p>
+      <p class="price" style=" background-color: #f0f0f0; color: #333; padding-right: -5px; border-radius: 5px;">
+      $${product.price.toFixed(2)}
+      </p>
       <br />
       <p class="product-name cart-item-title">${product.name}</p>
       <p><button class="addToCart" type="button">Add to Cart</button></p>
@@ -263,6 +262,7 @@ function clearCart() {
 // clear existing cart items
 function clearCartItems() {
   const cartItemsContainer = document.getElementsByClassName("cart-items")[0];
+  // Remove all cart items from the container
   // Check if the cart is already empty
   if (cartItemsContainer.children.length === 0) {
     alert("The cart is already empty!");
