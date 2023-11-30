@@ -81,7 +81,6 @@ function updateCartTotal() {
 
 //Variable for CLASS="addToCart"
 let addToCartBTN = document.getElementsByClassName("addToCart");
-// console.log(addToCartBTN);
 
 //For every click on Add to Cart on store, it then logs that item.
 for (let i = 0; i < addToCartBTN.length; i++) {
@@ -165,6 +164,14 @@ function addItemToCart(title, price, imageSrc) {
   saveCartToLocalStorage(); // Save the updated cart to local storage
 }
 
+// Function to update cart item total based on quantity
+function updateCartItemTotal(cartRow, numericPrice, quantity) {
+  const totalElement = cartRow.querySelector(".cart-item-total");
+  const total = numericPrice * quantity;
+  totalElement.innerText = `Per Item: $${total.toFixed(2)}`;
+}
+
+
 // Function to save the cart to local storage
 function saveCartToLocalStorage() {
   const cartItems = document.getElementsByClassName("cart-item");
@@ -207,6 +214,22 @@ function clearCart() {
 window.addEventListener("load", function () {
   loadCartFromLocalStorage();
   updateCartTotal();
+});
+
+// Add event listeners to plus and minus buttons
+document.addEventListener("DOMContentLoaded", function () {
+  const cartItems = document.getElementsByClassName("cart-items")[0];
+
+  cartItems.addEventListener("click", function (event) {
+    const target = event.target;
+    if (target.classList.contains(".minus") || target.classList.contains(".plus")) {
+      const cartRow = target.closest(".cart-item");
+      const quantityInput = cartRow.querySelector(".quantity");
+      const numericPrice = parseFloat(cartRow.querySelector(".cart-item-total").innerText.replace(/[^\d.]/g, ""));
+      updateCartItemTotal(cartRow, numericPrice, quantityInput.value);
+      saveCartToLocalStorage();
+    }
+  });
 });
 
 //DOM Objects
